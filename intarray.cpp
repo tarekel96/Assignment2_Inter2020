@@ -4,34 +4,35 @@ using namespace std;
 
 int main() {
 
-    /* max number of elements for vector */
-    const int MAX_NUM = 10;
+    /* var representing the size of the array */
+    const int SIZE = 10;
 
-    /* declare vector using max var to assign size of vector; the unsigned ensures no negative int will be an element of the vector  */
-    vector<unsigned int> array1(MAX_NUM);
+    /* numberArray declaration; use unsigned to ensure no negative integers are logged to the console */
+    int unsigned numberArray[SIZE];
 
-    /* declare/initialize i the iterating variable for both loops  */
+    /* declare/initialize the iterating variable used in both for loops */
     unsigned int i = 0;
 
-    /* loop that assigns user int input for each vector element */
-    for(i = 0; i < MAX_NUM; ++i) {
+    /* for loop that assigns a pos integer value from the user for each index of the array */
+    for(i = 0; i < SIZE; ++i) {
 
-        cout << "Enter a pos integer: " << endl;
+            cout << "Enter a positive integer: " << endl;
 
-        cin >> array1.at(i);     
-        
+            cin >> numberArray[i];
+    
+        }
+
+    /* for loop that loops through the nunberArray to console out each of its elements followed by a single space */
+    for(i = 0; i < SIZE; ++i) {
+
+        cout << numberArray[i] << " ";
+
     }
 
-    /* loop that prints out each element of the vector followed by a space */
-    for(i = 0; i < MAX_NUM; ++i) {
-
-        cout << array1.at(i) << " ";
-
-    }
-
+    /* added a line break for better readability of the numberArray elements */
     cout << endl;
 
-    return 0;
+    return 0; 
 
 }
 
