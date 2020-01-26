@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
 
-void getInput(int *ftL, float *inchesL);
+void getInput(float *ftL, float *inchesL);
+
+void convertFtToCent(float *ftL);
 
 int main() {
 
-    int ft = 0;
+    float ft = 0;
 
     float inc = 0.0;
 
@@ -21,27 +23,24 @@ int main() {
 
     cout << "You have entered " << ft << "ft. " << inc << " inches." << endl;
 
+
+    convertFtToCent(&ft);
+
+    cout << ft << "cm. " << endl;
+
     cout << "Program Complete. Goodbye" << endl;
 
     return 0;
 }
 
-void getInput(int *ftL, float *inchesL) { 
-
-   /* cout <<  ftL << " ft " << inchesL << " inches " << endl; */
+void getInput(float *ftL, float *inchesL) { 
 
 }
 
+void convertFtToCent(float *ftL){
+    
+    /* 30.48cm in one foot */
+    *ftL = *ftL * 30.48;
 
-/*
-void getInput(int ftL, float inchesL, int *ftLR, float *inchesLR) {
-
-    cout <<  ftL << " ft " << inchesL << " inches " << endl;
-
-        *ftLR = ftL;
-
-        *inchesLR = inchesL;
-
-
+    return;
 }
-*/
