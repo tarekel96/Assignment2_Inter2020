@@ -7,6 +7,8 @@ void convertFtToCent(float *ftL);
 
 void convertInchesToCent(float *inchesL);
 
+void convertCentToMet(float *cmL);
+
 int main() {
 
     float ft = 0;
@@ -35,6 +37,10 @@ int main() {
 
     cout << combinedInc << "cm. " << endl;
 
+    convertCentToMet(&combinedInc);
+
+    cout << combinedInc << "m. " << endl;
+
     cout << "Program Complete. Goodbye" << endl;
 
     return 0;
@@ -53,5 +59,11 @@ void convertFtToCent(float *ftL){
 void convertInchesToCent(float *inchesL){   
     /* 2.54cm in one inch */
     *inchesL = *inchesL * 2.54;
+    return;
+}
+
+void convertCentToMet(float *cmL){   
+    /* 2.54cm in one inch */
+    *cmL = *cmL / 100;
     return;
 }
